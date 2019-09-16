@@ -3,7 +3,6 @@ import React, { Component, Fragment } from "react";
 import axios from "axios";
 import _ from "lodash";
 import Footer from "./partials/footer";
-import Header from "./partials/header";
 import Hero from "./partials/hero";
 import helpers from "../helpers";
 import config from "../config";
@@ -58,27 +57,7 @@ export default class extends Component {
 
     return (
       <Layout cosmic={cosmic}>
-        <section className="hero">
-          <header id="header">
-            <a id="logo" href="#">
-              logo
-            </a>
-            <nav>
-              <a id="menu-icon">&#8801;</a>
-            </nav>
-          </header>
-          <header className="hero-header">
-            <h1 className="hero-title">The title of this hero module</h1>
-          </header>
-          <footer className="hero-footer">
-            <a className="button button-primary" href="#">
-              button one
-            </a>
-            <a className="button" href="#">
-              button two
-            </a>
-          </footer>
-        </section>
+        <Hero cosmic={hero} />
         <article>
           <h2>Some additional content</h2>
           <p>

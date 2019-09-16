@@ -29,21 +29,24 @@ body {
   padding: 1em;
   box-sizing: border-box;
   color: white;
-  background: url(https://images.unsplash.com/photo-1500417148159-68083bd7333a) center center no-repeat;
   background-size: cover;
+  background: {
+    repeat: no-repeat;
+    position: center center;
+  }
 }
 
 .hero-title {
   max-width: 16em;
   margin: 0;
-  font-size: 12vh;
+  font-size: 10vh;
   font-weight: bold;
   line-height: .9;
 }
 
 @media only screen and (min-width: 32em) {
   .hero-title {
-    font-size: 16vh;
+    font-size: 10vh;
   }
 }
 .hero-footer {

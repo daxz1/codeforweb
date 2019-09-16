@@ -18,9 +18,20 @@ const Hero = (props) => {
   } = props;
 
   return (
-    <div className="hero" style={{ backgroundImage: `url(${url})` }}>
-      <h1>{heroTitle}</h1>
-    </div>
+    <section className="hero" style={{ backgroundImage: `url(${url})` }}>
+      <header id="header">
+        <a id="logo" href="/">
+          CFW
+        </a>
+        <nav>
+          <a id="menu-icon" href='/'>&#8801;</a>
+        </nav>
+      </header>
+      <header className="hero-header">
+        <h1 className="hero-title">{heroTitle}</h1>
+      </header>
+      <footer className="hero-footer" />
+    </section>
   );
 };
 
