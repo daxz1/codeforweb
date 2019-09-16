@@ -5,7 +5,7 @@ const express = require('express');
 const consola = require('consola');
 const routes = require('./routes');
 
-const ENV = process.env.NODE_DEV || 'development';
+const ENV = process.env.NODE_ENV || 'development';
 const PORT = process.env.PORT || 3000;
 const ISDEV = ENV !== 'production';
 
