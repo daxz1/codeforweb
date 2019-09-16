@@ -2,7 +2,7 @@
   "scripts": {
     "dev": "node server.js",
     "build": "next build",
-    "start": "next build; NODE_ENV=production node server.js",
+    "start": "next build; NODE_ENV=production node -r esm server.js",
     "precommit": "lint-staged",
     "pretty": "prettier --write --tab-width 2 \"*.js\"",
     "eslint": "eslint --fix *.js",
@@ -36,6 +36,7 @@
     "@zeit/next-css": "^1.0.1",
     "@zeit/next-sass": "^1.0.1",
     "axios": "^0.19.0",
+    "esm": "^3.2.25",
     "express": "^4.17.1",
     "lodash": "^4.17.15",
     "next": "^9.0.5",

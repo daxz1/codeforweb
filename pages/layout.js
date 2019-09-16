@@ -1,7 +1,7 @@
 /*eslint-disable*/
 import React from "react";
 import Head from "next/head";
-import Footer from './partials/footer';
+import Footer from "./partials/footer";
 
 /**
  *
@@ -23,7 +23,7 @@ const Layout = props => {
         <title>Code For Web</title>
       </Head>
       {children}
-      <Footer/>
+      <Footer />
     </>
   );
 };
