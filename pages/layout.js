@@ -1,6 +1,7 @@
 /*eslint-disable*/
-import React from 'react';
-import Head from 'next/head';
+import React from "react";
+import Head from "next/head";
+import Footer from './partials/footer';
 
 /**
  *
@@ -8,21 +9,12 @@ import Head from 'next/head';
  * @returns {*}
  * @constructor
  */
-const Layout = (props) => {
+const Layout = props => {
   const { children } = props;
 
   return (
     <>
       <Head>
-        <link rel="stylesheet" type="text/css" href="/static/style.css" />
-        <link
-          href="https://fonts.googleapis.com/css?family=Lato"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css?family=Droid+Serif"
-          rel="stylesheet"
-        />
         <meta charSet="UTF-8" />
         <meta
           name="viewport"
@@ -31,6 +23,7 @@ const Layout = (props) => {
         <title>Code For Web</title>
       </Head>
       {children}
+      <Footer/>
     </>
   );
 };
