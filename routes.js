@@ -1,5 +1,5 @@
-const routes = module.exports = require('next-routes')()
+/* eslint-disable no-multi-assign */
 
-routes
-.add('index', '/:slug', 'post')
-.add('author', '/author/:slug', 'author')
+const routes = (module.exports = require('next-routes')());
+
+routes.add('index', '/:slug', 'post').add('author', '/author/:slug', 'author');
