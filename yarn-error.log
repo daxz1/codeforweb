@@ -1,0 +1,46 @@
+Arguments: 
+  /Users/cheemad/.nvm/versions/node/v10.16.0/bin/node /usr/local/Cellar/yarn/1.16.0/libexec/bin/yarn.js install
+
+PATH: 
+  /usr/local/opt/php@7.1/sbin:/usr/local/opt/php@7.1/bin:/Users/cheemad/.nvm/versions/node/v10.16.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/cheemad/Projects/codeforweb/node_modules/.bin
+
+Yarn version: 
+  1.16.0
+
+Node version: 
+  10.16.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: http://npm.onservo.com/axios: ETIMEDOUT
+      at Timeout._onTimeout (/usr/local/Cellar/yarn/1.16.0/libexec/lib/cli.js:130250:19)
+      at ontimeout (timers.js:436:11)
+      at tryOnTimeout (timers.js:300:5)
+      at listOnTimeout (timers.js:263:5)
+      at Timer.processTimers (timers.js:223:10)
+
+npm manifest: 
+  {
+    "scripts": {
+      "dev": "node server.js",
+      "build": "next build",
+      "start": "next build; NODE_ENV=production node server.js"
+    },
+    "dependencies": {
+      "axios": "^0.19.0",
+      "express": "^4.16.2",
+      "lodash": "^4.17.4",
+      "next": "^4.0.3",
+      "next-routes": "^1.1.0",
+      "react": "^16.0.0",
+      "react-dom": "^16.0.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
