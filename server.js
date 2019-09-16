@@ -5,9 +5,9 @@ const express = require('express');
 const consola = require('consola');
 const routes = require('./routes');
 
+const ENV = process.env.NODE_DEV || 'development';
 const PORT = process.env.PORT || 3000;
-const ISDEV = process.env.NODE_DEV !== 'production';
-const ENV = process.env.NODE_DEV;
+const ISDEV = ENV !== 'production';
 
 const app = next({ dev: ISDEV });
 const handler = routes.getRequestHandler(app);
