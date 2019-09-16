@@ -11,7 +11,7 @@ const Hero = (props) => {
   const { cosmic } = props;
 
   if (!cosmic) {
-    return (<div>Loading...</div>);
+    return <div>Loading...</div>;
   }
 
   const {
