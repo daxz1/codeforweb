@@ -3,7 +3,6 @@
     "dev": "node server.js",
     "build": "next build",
     "start": "next build; NODE_ENV=production node server.js",
-    "precommit": "lint-staged",
     "pretty": "prettier --write --tab-width 2 \"*.js\"",
     "eslint": "eslint --fix *.js",
     "test": "jest",
@@ -61,5 +60,10 @@
     "lint-staged": "^9.2.5",
     "prettier": "^1.18.2",
     "react-test-renderer": "^16.9.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }

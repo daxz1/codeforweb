@@ -2,9 +2,7 @@
 import React, { Component, Fragment } from "react";
 import axios from "axios";
 import _ from "lodash";
-import Footer from "./partials/footer";
 import Hero from "./partials/hero";
-import helpers from "../helpers";
 import config from "../config";
 import Layout from "./layout";
 import "./styles.scss";
@@ -26,58 +24,74 @@ export default class extends Component {
     }`;
     return await axios
       .post("https://graphql.cosmicjs.com/v1", { query })
-      .then(response => ({
-        cosmic: {
-          posts: _.filter(response.data.data.getObjects, {
+      .then(response => {
+
+        const {
+          data: {
+            data: {
+              getObjects
+            }
+          }
+        } = response;
+
+        const cosmic = {
+          posts: _.filter(getObjects, {
             type_slug: "posts"
           }),
           global: _.keyBy(
-            _.filter(response.data.data.getObjects, { type_slug: "globals" }),
+            _.filter(getObjects, { type_slug: "globals" }),
             "slug"
           )
-        }
-      }))
+        };
+        console.log(cosmic);
+        return cosmic;
+
+      })
       .catch(error => {
         console.log(error);
       });
   }
 
   render() {
-    const { cosmic } = this.props;
 
-    if (!cosmic) {
-      return <div>Loading</div>;
+    console.log(this.props);
+
+    const { global, posts } = this.props;
+
+    if (!global) {
+      return <div className="flash">Loading</div>;
     }
 
     const {
-      cosmic: {
-        global: { hero }
-      }
-    } = this.props;
+      hero
+    } = global;
 
     return (
-      <Layout cosmic={cosmic}>
+      <Layout cosmic={this.props}>
         <Hero cosmic={hero} />
-        <article>
-          <h2>Some additional content</h2>
-          <p>
-            The rest of the page content continues below the hero. You can use
-            the hero at the top of your page, e.g. the home page. A hero is
-            great to display a high quality picture together with tasty title.
-          </p>
-          <p>
-            Ad donec tincidunt torquent ultricies convallis sodales faucibus
-            magna, fringilla lorem blandit sollicitudin donec faucibus curae
-            orci molestie, et proin curae aliquet venenatis ligula amet vivamus
-            orci varius arcu.
-          </p>
-          <p>
-            Laoreet fusce condimentum venenatis quisque imperdiet ornare cras
-            faucibus convallis, pharetra habitasse elementum ut bibendum per
-            sociosqu phasellus etiam, velit faucibus integer torquent leo
-            elementum maecenas netus.
-          </p>
-        </article>
+
+        {
+          posts.map(post => {
+
+            const {
+              _id,
+              slug,
+              title,
+              metadata: {
+                teaser
+              }
+            } = post;
+
+
+            return (
+              <article key={_id}>
+                <h2>{title}</h2>
+                <div className="blog__teaser droid" dangerouslySetInnerHTML={{__html: teaser}} />
+              </article>
+            )
+          })
+        }
+
       </Layout>
     );
   }

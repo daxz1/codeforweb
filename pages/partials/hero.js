@@ -8,12 +8,6 @@ import PropTypes from 'prop-types';
  * @constructor
  */
 const Hero = (props) => {
-  const { cosmic } = props;
-
-  if (!cosmic) {
-    return <div>Loading...</div>;
-  }
-
   const {
     cosmic: {
       metadata: {
@@ -29,11 +23,6 @@ const Hero = (props) => {
         <a id="logo" href="/">
           CFW
         </a>
-        <nav>
-          <a id="menu-icon" href="/">
-            &#8801;
-          </a>
-        </nav>
       </header>
       <header className="hero-header">
         <h1 className="hero-title">{heroTitle}</h1>
