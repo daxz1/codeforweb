@@ -6,7 +6,7 @@ import consola from 'consola';
 import axios from 'axios';
 import _ from 'lodash';
 import config from '../config';
-import { Hero, Teaser, Layout } from './partials';
+import { Hero, Teaser, Layout } from '../components';
 
 import './styles.scss';
 
