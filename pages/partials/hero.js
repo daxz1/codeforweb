@@ -1,36 +1,28 @@
-import React from 'react';
+import React, { memo } from 'react';
 import PropTypes from 'prop-types';
 
 /**
- *
- * @param props
- * @returns {*[]}
- * @constructor
+ * Hero Component
+ * @param url
+ * @param heroTitle
  */
-const Hero = (props) => {
-  const {
-    cosmic: {
-      metadata: {
-        hero_image: { url },
-        hero_title: heroTitle,
-      },
+const Hero = ({
+  cosmic: {
+    metadata: {
+      hero_image: { url },
+      hero_title: heroTitle,
     },
-  } = props;
-
-  return (
-    <section className="hero" style={{ backgroundImage: `url(${url})` }}>
-      <header id="header">
-        <a id="logo" href="/">
-          CFW
-        </a>
-      </header>
-      <header className="hero-header">
-        <h1 className="hero-title">{heroTitle}</h1>
-      </header>
-      <footer className="hero-footer" />
-    </section>
-  );
-};
+  },
+}) => (
+  <section className="hero" style={{ backgroundImage: `url(${url})` }}>
+    <a className="hero__logo" href="/">
+      CFW
+    </a>
+    <header className="hero__header">
+      <h1 className="hero__title">{heroTitle}</h1>
+    </header>
+  </section>
+);
 
 Hero.propTypes = {
   cosmic: PropTypes.shape({
@@ -43,4 +35,4 @@ Hero.propTypes = {
   }).isRequired,
 };
 
-export default Hero;
+export default memo(Hero);

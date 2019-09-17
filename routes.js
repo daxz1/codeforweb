@@ -2,4 +2,4 @@
 
 const routes = (module.exports = require('next-routes')());
 
-routes.add('index', '/:slug', 'post');
+routes.add('home', '/:slug', 'post');
