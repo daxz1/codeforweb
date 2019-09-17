@@ -3,6 +3,7 @@ import React, { Component, Fragment } from "react";
 import axios from "axios";
 import _ from "lodash";
 import Hero from "./partials/hero";
+import Teaser from "./partials/teaser";
 import config from "../config";
 import Layout from "./layout";
 import "./styles.scss";
@@ -69,26 +70,9 @@ export default class extends Component {
     return (
       <Layout cosmic={this.props}>
         <Hero cosmic={hero} />
-
         {
           posts.map(post => {
-
-            const {
-              _id,
-              slug,
-              title,
-              metadata: {
-                teaser
-              }
-            } = post;
-
-
-            return (
-              <article key={_id}>
-                <h2>{title}</h2>
-                <div className="blog__teaser droid" dangerouslySetInnerHTML={{__html: teaser}} />
-              </article>
-            )
+            return (<Teaser post={post}/>)
           })
         }
 
