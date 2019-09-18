@@ -41,11 +41,39 @@ body {
   }
 }
 
-article {
-  max-width: 36em;
+// Article Cards
+
+.teaser {
+  max-width: 40em;
   margin: 0 auto;
   padding: 1em;
+  color: #4E4E4F;
+
+  .teaser__title {
+    color: #5E2999;
+    text-transform: uppercase;
+  }
+
+  .teaser__more {
+    & a {
+      color: #5E2999;
+    }
+  }
 }
+
+// posts
+
+.post {
+  max-width: 40em;
+  margin: 0 auto;
+  padding: 1em;
+  //font-size: 2vh;
+
+  .post__title {
+    color: #5E2999;
+  }
+}
+
 
 .flash{
   //color: #f2f;

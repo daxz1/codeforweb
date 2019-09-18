@@ -19,14 +19,14 @@ const Teaser = (props) => {
     },
   } = props;
   return (
-    <article key={_id}>
-      <h2>{title}</h2>
+    <article key={_id} className="teaser">
+      <h2 className="teaser__title">{title}</h2>
       <div
-        className="blog__teaser droid"
+        className="teaser__teaser"
         dangerouslySetInnerHTML={{ __html: teaser }}
       />
-      <div className="blog__read-more">
-        <a href={`/${slug}`}>Read more...</a>
+      <div className="teaser__more">
+        <a href={`/${slug}`}>Read more</a>
       </div>
     </article>
   );
