@@ -6,9 +6,9 @@ import consola from 'consola';
 import axios from 'axios';
 import _ from 'lodash';
 import config from '../config';
-import { Hero, Teaser, Layout } from '../components';
+import { Header, Layout } from '../components';
 
-import './styles.scss';
+// import '../styles/global/styles.scss';
 
 const Post = (props) => {
   const {
@@ -23,6 +23,7 @@ const Post = (props) => {
 
   return (
     <Layout cosmic={props}>
+      <Header />
       <main className="post">
         {post && (
           <>

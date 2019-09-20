@@ -8,7 +8,7 @@ import _ from 'lodash';
 import config from '../config';
 import { Hero, Teaser, Layout } from '../components';
 
-import './styles.scss';
+// import '../styles/global/styles.scss';
 
 /**
  * Homepage Component

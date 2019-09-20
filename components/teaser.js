@@ -26,7 +26,7 @@ const Teaser = (props) => {
         dangerouslySetInnerHTML={{ __html: teaser }}
       />
       <div className="teaser__more">
-        <a href={`/${slug}`}>Read more</a>
+        <a href={`/article/${slug}`}>Read more</a>
       </div>
     </article>
   );
