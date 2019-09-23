@@ -63,7 +63,7 @@ const Netflix = () => (
         <div className="profiles_grid">
           {PROFILES.map((profile) => {
             const { name, picture } = profile;
-            return <Profile name={name} picture={picture} />;
+            return <Profile key={name} name={name} picture={picture} />;
           })}
         </div>
       </div>
