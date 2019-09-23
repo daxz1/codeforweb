@@ -1,139 +1,61 @@
 @import "../../node_modules/normalize.css/normalize.css";
-body {
-  font-family: 'PT Sans Caption',"Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-  font-size: 3vh;
-}
-// Hero Component
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+@import "../colours";
 
-.hero {
+* {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+body {
+  font: {
+    family: 'Lato', sans-serif;
+    size: 16px;
+  }
+}
+
+.home {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  height: 100vh;
-  padding: 1em;
-  box-sizing: border-box;
-  color: white;
-  background-size: cover;
-  background: {
-    repeat: no-repeat;
-    position: center center;
-  }
 
-  .hero__logo {
-    text-decoration: none;
-    color: white;
-    font-size: 3vh;
-    font-weight: bold;
-  }
-
-  .hero__header {
+  .projects {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: row;
   }
 
-  .hero__title {
-    max-width: 16em;
-    font-size: 8vh;
+  .project {
+    display: flex;
     align-content: center;
+    justify-content: center;
     align-items: center;
-    display: flex;
-    margin-bottom: 5em;
-  }
-}
+    width: 400px;
+    height: 400px;
+    margin: 1rem;
+    border-radius: 3px;
 
-// Article Cards
+    &:hover {
+      transform: scale(0.8);
+    }
 
-.teaser {
-  max-width: 40em;
-  margin: 0 auto;
-  padding: 1em;
-  color: #4E4E4F;
+    &.project__netflix {
+      background: {
+        color: $cod_gray;
+        image: url("https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg");
+        repeat: no-repeat;
+        size: 200px 200px;
+        position: center center;
+      }
 
-  .teaser__title {
-    color: #5E2999;
-    text-transform: uppercase;
-  }
-
-  .teaser__more {
-    & a {
-      color: #5E2999;
+      a {
+        color: $white;
+        text-decoration: none;
+        overflow: hidden;
+        margin: {
+          top: 200px;
+          left: 20px;
+          right: 20px;
+        }
+      }
     }
   }
 }
-
-// posts
-
-.post {
-  max-width: 40em;
-  margin: 0 auto;
-  padding: 1em;
-  //font-size: 2vh;
-
-  .post__title {
-    color: #5E2999;
-  }
-}
-
-
-.flash{
-  //color: #f2f;
-  -webkit-animation: flash linear 3s infinite;
-  animation: flash linear 3s infinite;
-  text-align: center;
-  margin-top: 10%;
-}
-@-webkit-keyframes flash {
-  0% { opacity: 1; }
-  50% { opacity: .1; }
-  100% { opacity: 1; }
-}
-@keyframes flash {
-  0% { opacity: 1; }
-  50% { opacity: .1; }
-  100% { opacity: 1; }
-}
-
-// Footer
-.footer {
-  display: flex;
-  font-size: 2vh;
-  margin: 100px 0 30px 0;
-  justify-content: center;
-}
-
-// Menu
-// https://webdesign.tutsplus.com/tutorials/how-to-build-a-responsive-navigation-bar-with-flexbox--cms-33535
-//.menu {
-//  display: flex;
-//  flex-wrap: wrap;
-//  justify-content: space-between;
-//  background: #222222;
-//  padding: 5px 20px;
-//  border: 1px solid red;
-//  list-style: none;
-//  a {
-//    color: #ffffff;
-//    text-decoration: none;
-//  }
-//  .item {
-//    width: 100%;
-//    text-align: center;
-//    order: 3;
-//    display: none;
-//  }
-//
-//  .item.active {
-//    display: block;
-//  }
-//}
-//
-//@media all and (min-width: 600px) {
-//  .menu {
-//    justify-content: center;
-//  }
-//  .logo {
-//    flex: 1;
-//  }
-//
-//}

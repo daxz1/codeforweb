@@ -3,6 +3,10 @@ import { Profile, NetflixHeader } from '../components';
 
 import '../styles/netflix/netflix.scss';
 
+/**
+ *
+ * @type {*[]}
+ */
 const PROFILES = [
   {
     name: 'Morwen',
@@ -32,7 +36,7 @@ const PROFILES = [
 ];
 
 /**
- *
+ * Netflix Component
  * @returns {*}
  * @constructor
  */
@@ -59,7 +63,7 @@ const Netflix = () => (
         <div className="profiles_grid">
           {PROFILES.map((profile) => {
             const { name, picture } = profile;
-            return (<Profile name={name} picture={picture} />);
+            return <Profile name={name} picture={picture} />;
           })}
         </div>
       </div>
