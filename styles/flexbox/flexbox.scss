@@ -2,6 +2,10 @@
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 @import "colours";
 
+* {
+  -webkit-transition: all 1s;
+}
+
 .flexbox {
   background-color: $cod_gray;
   display: flex;
@@ -9,8 +13,7 @@
   height: 100vh;
   width: 100vw;
 
-  .menu-container {
-    //border: 1px solid red;
+  .navigation {
     height: 68px;
     overflow: hidden;
     display: flex;
@@ -22,18 +25,12 @@
       size: 16px;
     }
 
-    .menu {
+    .navigation__menu {
       display: flex;
       align-items: center;
-      //justify-content: space-between;
       width: 1000px;
-      //padding: 20px;
 
-      .logo {
-        background-image: url("https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg");
-        background-repeat: no-repeat;
-        background-size: contain;
-        vertical-align: center;
+      .navigation__logo {
         width: 92.5px;
         height: 31px;
         display: inline-flex;
@@ -47,11 +44,20 @@
   }
 
 
-  .photo-grid-container {
+  .profiles {
     display: flex;
     justify-content: center;
-
-    .photo-grid {
+    flex-direction: column;
+    .profiles__title {
+      display: flex;
+      justify-content: center;
+      color: $white;
+      font: {
+        family: 'Lato', sans-serif;
+        size: 16px;
+      }
+    }
+    .profiles_grid {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
@@ -60,8 +66,9 @@
       align-items: center; // Or if flex direction is set to column
     }
 
-    .article {
+    .profiles__profile {
       display: flex;
+      position: relative;
       align-content: center;
       flex-direction: column;
       justify-content: center;
@@ -77,7 +84,7 @@
 
       margin: {
         top: 20px;
-        bottom: 20px;
+        bottom: 40px;
         left: 5px;
         right: 33.6px;
       };
@@ -85,30 +92,20 @@
       padding: {
         top: 5px;
         bottom: 5px;
-        left: 0px;
+        left: 0;
         right: 5px
       }
 
-      .title,
-      .teaser {
+      .profile__title {
+        width: 168px;
         text-align: center;
-        border: 1px solid red;
-      }
-
-      &.article-one {
-        background-image: url("https://occ-0-299-300.1.nflxso.net/art/c83fe/6c218aba13637fff1554e17c73c4e2481e6c83fe.png");
-      }
-      &.article-two {
-        background-image: url("https://occ-0-299-300.1.nflxso.net/art/9b3ac/8794c6ddda9938b95beded514a5cd38b7019b3ac.png");
-      }
-      &.article-three {
-        background-image: url("https://occ-0-299-300.1.nflxso.net/art/38a46/8933fd1cd7004960c16215c5fd33036b39b38a46.png");
-      }
-      &.article-four {
-        background-image: url("https://occ-0-299-300.1.nflxso.net/art/0d282/eb648e0fd0b2676dbb7317310a48f9bdc2b0d282.png");
-      }
-      &.article-five {
-        background-image: url("https://occ-0-299-300.1.nflxso.net/art/c0c0e/af353b54475c9667ac96f986de8003b72edc0c0e.png");
+        color: $white;
+        position: absolute;
+        bottom: -30px;
+        font: {
+          family: 'Lato', sans-serif;
+          size: 16px;
+        }
       }
     }
   }

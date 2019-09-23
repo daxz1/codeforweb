@@ -1,10 +1,9 @@
 import React, { memo } from 'react';
-import PropTypes from 'prop-types';
 
 const Header = () => (
   <nav>
-    <ul className="menu">
-      <li className="logo">
+    <ul className="navigation__menu">
+      <li className="navigation__logo">
         <a href="/">App</a>
       </li>
       <li className="item">
@@ -16,13 +15,8 @@ const Header = () => (
       <li className="item button">
         <a href="/">Login</a>
       </li>
-      <li className="toggle">
-        <a href="/" />
-      </li>
     </ul>
   </nav>
 );
-
-Header.propTypes = {};
 
 export default memo(Header);
