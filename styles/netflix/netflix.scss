@@ -1,9 +1,10 @@
 @import "~normalize.css/normalize.css";
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
-@import "colours";
+@import "../colours";
 
 * {
   -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
 .netflix {
