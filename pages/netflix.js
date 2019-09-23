@@ -1,5 +1,7 @@
 import React, { memo } from 'react';
-import '../styles/flexbox/flexbox.scss';
+import { Profile, NetflixHeader } from '../components';
+
+import '../styles/netflix/netflix.scss';
 
 const PROFILES = [
   {
@@ -34,12 +36,13 @@ const PROFILES = [
  * @returns {*}
  * @constructor
  */
-const Flexbox = () => (
+const Netflix = () => (
   <>
-    <div className="flexbox">
+    <NetflixHeader />
+    <div className="netflix">
       <div className="navigation">
         <div className="navigation__menu">
-          <a href="/flexbox">
+          <a href="/netflix">
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg"
               alt="Netflix"
@@ -56,14 +59,7 @@ const Flexbox = () => (
         <div className="profiles_grid">
           {PROFILES.map((profile) => {
             const { name, picture } = profile;
-            return (
-              <article
-                className="profiles__profile"
-                style={{ backgroundImage: `url(${picture})` }}
-              >
-                <div className="profile__title">{name}</div>
-              </article>
-            );
+            return (<Profile name={name} picture={picture} />);
           })}
         </div>
       </div>
@@ -71,4 +67,4 @@ const Flexbox = () => (
   </>
 );
 
-export default memo(Flexbox);
+export default memo(Netflix);

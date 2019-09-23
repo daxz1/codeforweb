@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[RENDER] components/netflix/profile/profile.js Header Component renders 1`] = `
+<article
+  className="profiles__profile"
+  style={
+    Object {
+      "backgroundImage": "url(https://occ-0-299-300.1.nflxso.net/art/c83fe/6c218aba13637fff1554e17c73c4e2481e6c83fe.png)",
+    }
+  }
+>
+  <div
+    className="profile__title"
+  >
+    Morwen
+  </div>
+</article>
+`;

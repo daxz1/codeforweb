@@ -6,7 +6,7 @@
   -webkit-transition: all 1s;
 }
 
-.flexbox {
+.netflix {
   background-color: $cod_gray;
   display: flex;
   flex-direction: column;
@@ -15,7 +15,6 @@
 
   .navigation {
     height: 68px;
-    overflow: hidden;
     display: flex;
     justify-content: flex-start;
     color: $daisy_bush;
@@ -28,7 +27,6 @@
     .navigation__menu {
       display: flex;
       align-items: center;
-      width: 1000px;
 
       .navigation__logo {
         width: 92.5px;
@@ -48,20 +46,25 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
+
     .profiles__title {
       display: flex;
       justify-content: center;
       color: $white;
       font: {
         family: 'Lato', sans-serif;
-        size: 16px;
+        size: 25px;
       }
+      margin: {
+        left: 20px;
+      };
     }
+
     .profiles_grid {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      width: 100%;
+      width: 100vw;
       flex-direction: row;
       align-items: center; // Or if flex direction is set to column
     }
@@ -81,12 +84,13 @@
         family: 'Lato', sans-serif;
         size: 16px;
       }
+      border: 5px solid $mine_shaft;
 
       margin: {
         top: 20px;
         bottom: 40px;
-        left: 5px;
-        right: 33.6px;
+        right: 20px;
+        left: 20px;
       };
 
       padding: {
@@ -94,6 +98,11 @@
         bottom: 5px;
         left: 0;
         right: 5px
+      }
+
+      &:hover {
+        cursor: pointer;
+        border: 5px solid $white
       }
 
       .profile__title {
