@@ -1,28 +1,50 @@
 import React from 'react';
+import { ArticleSnippet } from '../components';
 
 import '../styles/london/london.scss';
 
 const ARTICLE_COLUMN_ONE = [
   {
-    title: 'A year after the mutiny, HSBC plots its next investment banking overhaul',
-    snippet: 'Former JPMorgan executive Greg Guyett is the latest to try his hand at helping HSBC win a bigger share of global investment banking fees',
+    title:
+      'A year after the mutiny, HSBC plots its next investment banking overhaul',
+    snippet:
+      'Former JPMorgan executive Greg Guyett is the latest to try his hand at helping HSBC win a bigger share of global investment banking fees',
     tags: ['Interactive', 'Asset Management', 'Brexit'],
   },
   {
     title: 'CEOs of London and Hong Kong exchanges set out clashing visions',
-    snippet: 'David Schwimmer and Charles Li appeared in consecutive interviews at Sibos',
+    snippet:
+      'David Schwimmer and Charles Li appeared in consecutive interviews at Sibos',
     tags: ['London Stock Exchange', 'M&A', 'Trading'],
-    img: 'https://si.wsj.net/public/resources/images/FN-AI236_FN_LI_E_20190924101130.jpg',
-
+    img:
+      'https://si.wsj.net/public/resources/images/FN-AI236_FN_LI_E_20190924101130.jpg',
+  },
+  {
+    title: 'Helena Morrissey in the running for Bank of England job',
+    snippet: 'Dame Morrissey is reportedly one of nine candidates interviewed for the role',
+    tags: ['Trading', 'HFT'],
+  },
+  {
+    title: '‘Huge number’ of smaller finance companies not ready for Brexit, says MEP',
+    snippet: 'Speaking at a Labour Party conference fringe event, Neena Gill cautioned that Brexit-related job cuts in financial services would be felt not only in London',
+    tags: ['Brexit', 'Politics'],
   },
 ];
 
 const ARTICLE_COLUMN_TWO = [
   {
-    title: 'A year after the mutiny, HSBC plots its next investment banking overhaul',
-    snippet: 'Former JPMorgan executive Greg Guyett is the latest to try his hand at helping HSBC win a bigger share of global investment banking fees',
+    title: 'Solomon marks anniversary at Goldman with leadership reshuffle',
+    snippet: 'Promotions include new female chairs for investment banking and asset management divisions',
     tags: ['Interactive'],
-    img: 'https://si.wsj.net/public/resources/images/FN-AI180_FN_JPM_D_20190918054222.jpg',
+    img:
+      'https://si.wsj.net/public/resources/images/FN-AI180_FN_JPM_D_20190918054222.jpg',
+  },
+  {
+    title: '‘Like a TV courtroom drama come to life’: City reacts to unlawful closure of Parliament',
+    snippet: 'The UK Supreme Court rules that the prime minister should not have asked the Queen to prorogue Parliament',
+    tags: ['Brexit', 'Economics', 'Politics'],
+    img:
+      'https://si.wsj.net/public/resources/images/FN-AI232_FN_MIL_GR_20190924062005.jpg',
   },
 ];
 
@@ -102,46 +124,17 @@ const London = () => (
           <div className="column__one">
             {ARTICLE_COLUMN_ONE.map((article) => {
               const {
-                img = '',
-                title,
-                snippet,
-                tags,
+                img = '', title, snippet, tags,
               } = article;
-              return (
-                <article>
-                  {img && <img src={img} alt="" />}
-                  <h3>{title}</h3>
-                  <p>{snippet}</p>
-                  <div className="tags">
-                    <ul>
-                      {tags.map((tag) => (<li>{tag}</li>))}
-                    </ul>
-                  </div>
-                </article>
-              );
+              return <ArticleSnippet snippet={snippet} tags={tags} img={img} title={title} />;
             })}
           </div>
           <div className="column__two">
             {ARTICLE_COLUMN_TWO.map((article) => {
               const {
-                img = '',
-                title,
-                snippet,
-                tags,
+                img = '', title, snippet, tags,
               } = article;
-
-              return (
-                <article>
-                  {img && <img src={img} alt="" />}
-                  <h3>{title}</h3>
-                  <p>{snippet}</p>
-                  <div className="tags">
-                    <ul>
-                      {tags.map((tag) => (<li>{tag}</li>))}
-                    </ul>
-                  </div>
-                </article>
-              );
+              return <ArticleSnippet snippet={snippet} tags={tags} img={img} title={title} />;
             })}
           </div>
         </section>
@@ -171,7 +164,7 @@ const London = () => (
             The News Building
             {' '}
             <br />
-            1 London Bridge Street
+1 London Bridge Street
             {' '}
             <br />
             London, SE1 9GF
