@@ -1,0 +1,42 @@
+.container {
+  border: 1px solid red;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: row;
+  margin: 0;
+}
+
+.navigation {
+  background-color: red;
+  flex: 1;
+}
+
+.main__container {
+  display: flex;
+  flex-direction: column;
+  flex: 5;
+  .main__container__header {
+    background: blue;
+    height: 20vh;
+  }
+  .main {
+    display: flex;
+    flex-direction: row;
+  }
+  .main__body {
+    flex: 3;
+    min-height: 60vh;
+    //border: 1px solid red;
+    //width: 1000px;
+  }
+  .main__right {
+    flex: 1;
+    background: beige;
+    //border: 1px solid green;
+    //width: 200px;
+  }
+}
+
+.footer {
+  display: flex;
+}
