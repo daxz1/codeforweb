@@ -1,5 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+@import "../colours";
+
+body {
+  font: {
+    family: 'Lato', sans-serif;
+    size: 16px;
+  }
+}
+
 .container {
-  border: 1px solid red;
   display: flex;
   min-height: 100vh;
   flex-direction: row;
@@ -7,8 +16,48 @@
 }
 
 .navigation {
-  background-color: red;
-  flex: 1;
+  background-color: $ta_papa_green;
+
+  .brand {
+    display: flex;
+    width: 220px;
+    height: 220px;
+    background-color: $carnation;
+    justify-content: center;
+    flex-direction: column;
+
+    .brand__logo {
+      display: block;
+      height: 100px;
+      background: {
+        image: url("https://assets.fnlondon.com/s3/fn/fn_logo.svg");
+        repeat: no-repeat;
+        position: 40px;
+      }
+    }
+    .brand__name {
+      color: $white;
+      text-align: left;
+      width: 140px;
+      margin: 0 auto;
+    }
+  }
+
+  .navigation__menu {
+    list-style: none;
+    padding: 50px 0 0 0;
+    .menu__item {
+      padding: 16px 0 16px 0;
+      &:hover {
+        background-color: $pickled_bluewood;
+      }
+    }
+    .menu__link {
+      color: $white;
+      text-decoration: none;
+      margin: 0 0 0 40px;
+    }
+  }
 }
 
 .main__container {
