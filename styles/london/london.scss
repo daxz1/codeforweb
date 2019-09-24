@@ -64,9 +64,28 @@ body {
   display: flex;
   flex-direction: column;
   flex: 5;
+
   .main__container__header {
-    background: blue;
     height: 20vh;
+
+    .register__content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      border-bottom: 1px solid $pickled_bluewood;
+      font-size: 14px;
+      background-color: #f4f0e9;
+
+    }
+    .button__container {
+      margin: 0 50px 0 0;
+      .button {
+        margin: 0 0 0 20px;
+      }
+    }
+
+
   }
   .main {
     display: flex;
@@ -75,17 +94,28 @@ body {
   .main__body {
     flex: 3;
     min-height: 60vh;
-    //border: 1px solid red;
-    //width: 1000px;
   }
   .main__right {
     flex: 1;
     background: beige;
-    //border: 1px solid green;
-    //width: 200px;
   }
 }
 
 .footer {
   display: flex;
+}
+
+// Generic
+.button {
+  border: 1px solid #4d6172;
+  padding: 10px;
+  text-decoration: none;
+  color: #4d6172;
+  display: inline-flex;
+  border-radius: 3px;
+
+  &.button--alternative {
+    color: $white;
+    background: #4d6172;
+  }
 }
