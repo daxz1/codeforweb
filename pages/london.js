@@ -52,17 +52,87 @@ const London = () => (
         <div className="register">
           <div className="register__content">
             <div>
-              <p>Become a member. Join to access the insight and analysis powering the financial sector.</p>
+              <p>
+                Become a member. Join to access the insight and analysis
+                powering the financial sector.
+              </p>
             </div>
             <div className="button__container">
-              <a className="button" href="/">Sign In</a>
-              <a className="button button--alternative" href="/">Subscribe</a>
+              <a className="button" href="/">
+                Sign In
+              </a>
+              <a className="button button--alternative" href="/">
+                Subscribe
+              </a>
             </div>
           </div>
         </div>
+
+        <div className="advert">
+          <img src="../static/london/62643.jpg" alt="Ads" />
+        </div>
       </header>
+
+
       <main className="main">
-        <section className="main__body">body</section>
+        <section className="main__body">
+          <div className="column__one">
+            <article>
+              <h3>A year after the mutiny, HSBC plots its next investment banking overhaul</h3>
+              <p>
+Former JPMorgan executive Greg Guyett is the latest to try his hand at helping HSBC win a bigger share
+                of global investment banking fees
+              </p>
+              <div className="tags">
+                <ul>
+                  <li>Interactive</li>
+                  <li>Asset Management</li>
+                </ul>
+              </div>
+            </article>
+            <article>
+              <h3>A year after the mutiny, HSBC plots its next investment banking overhaul</h3>
+              <p>
+Former JPMorgan executive Greg Guyett is the latest to try his hand at helping HSBC win a bigger share
+                of global investment banking fees
+              </p>
+              <div className="tags">
+                <ul>
+                  <li>Interactive</li>
+                  <li>Asset Management</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+          <div className="column__two">
+            <article>
+              <h3>A year after the mutiny, HSBC plots its next investment banking overhaul</h3>
+              <p>
+Former JPMorgan executive Greg Guyett is the latest to try his hand at helping HSBC win a bigger share
+                of global investment banking fees
+              </p>
+              <div className="tags">
+                <ul>
+                  <li>Interactive</li>
+                  <li>Asset Management</li>
+                </ul>
+              </div>
+            </article>
+            <article>
+              <h3>A year after the mutiny, HSBC plots its next investment banking overhaul</h3>
+              <p>
+Former JPMorgan executive Greg Guyett is the latest to try his hand at helping HSBC win a bigger share
+                of global investment banking fees
+              </p>
+              <div className="tags">
+                <ul>
+                  <li>Interactive</li>
+                  <li>Asset Management</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </section>
         <aside className="main__right">right rail</aside>
       </main>
       <footer>footer</footer>
