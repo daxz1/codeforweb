@@ -21,12 +21,15 @@ const ARTICLE_COLUMN_ONE = [
   },
   {
     title: 'Helena Morrissey in the running for Bank of England job',
-    snippet: 'Dame Morrissey is reportedly one of nine candidates interviewed for the role',
+    snippet:
+      'Dame Morrissey is reportedly one of nine candidates interviewed for the role',
     tags: ['Trading', 'HFT'],
   },
   {
-    title: '‘Huge number’ of smaller finance companies not ready for Brexit, says MEP',
-    snippet: 'Speaking at a Labour Party conference fringe event, Neena Gill cautioned that Brexit-related job cuts in financial services would be felt not only in London',
+    title:
+      '‘Huge number’ of smaller finance companies not ready for Brexit, says MEP',
+    snippet:
+      'Speaking at a Labour Party conference fringe event, Neena Gill cautioned that Brexit-related job cuts in financial services would be felt not only in London',
     tags: ['Brexit', 'Politics'],
   },
 ];
@@ -34,19 +37,50 @@ const ARTICLE_COLUMN_ONE = [
 const ARTICLE_COLUMN_TWO = [
   {
     title: 'Solomon marks anniversary at Goldman with leadership reshuffle',
-    snippet: 'Promotions include new female chairs for investment banking and asset management divisions',
+    snippet:
+      'Promotions include new female chairs for investment banking and asset management divisions',
     tags: ['Interactive'],
     img:
       'https://si.wsj.net/public/resources/images/FN-AI180_FN_JPM_D_20190918054222.jpg',
   },
   {
-    title: '‘Like a TV courtroom drama come to life’: City reacts to unlawful closure of Parliament',
-    snippet: 'The UK Supreme Court rules that the prime minister should not have asked the Queen to prorogue Parliament',
+    title:
+      '‘Like a TV courtroom drama come to life’: City reacts to unlawful closure of Parliament',
+    snippet:
+      'The UK Supreme Court rules that the prime minister should not have asked the Queen to prorogue Parliament',
     tags: ['Brexit', 'Economics', 'Politics'],
     img:
       'https://si.wsj.net/public/resources/images/FN-AI232_FN_MIL_GR_20190924062005.jpg',
   },
 ];
+
+const NAVIGATION = [
+  {
+    path: '/',
+    title: 'Top Stories',
+  },
+  {
+    path: '/',
+    title: 'News',
+  },
+  {
+    path: '/',
+    title: 'Views',
+  },
+  {
+    path: '/',
+    title: 'People',
+  },
+  {
+    path: '/',
+    title: 'Brexit',
+  },
+  {
+    path: '/',
+    title: 'Events & Awards',
+  },
+];
+
 
 /**
  *
@@ -61,36 +95,16 @@ const London = () => (
         <div className="brand__name">Financial News</div>
       </div>
       <ul className="navigation__menu">
-        <li className="menu__item">
-          <a className="menu__link" href="/">
-            Top Stories
-          </a>
-        </li>
-        <li className="menu__item">
-          <a className="menu__link" href="/">
-            News
-          </a>
-        </li>
-        <li className="menu__item">
-          <a className="menu__link" href="/">
-            Views
-          </a>
-        </li>
-        <li className="menu__item">
-          <a className="menu__link" href="/">
-            People
-          </a>
-        </li>
-        <li className="menu__item">
-          <a className="menu__link" href="/">
-            Brexit
-          </a>
-        </li>
-        <li className="menu__item">
-          <a className="menu__link" href="/">
-            Events & Awards
-          </a>
-        </li>
+        {NAVIGATION.map((nav) => {
+          const { title, path } = nav;
+          return (
+            <li className="menu__item">
+              <a className="menu__link" href={path}>
+                {title}
+              </a>
+            </li>
+          );
+        })}
       </ul>
     </nav>
     <div className="main__container">
@@ -126,7 +140,14 @@ const London = () => (
               const {
                 img = '', title, snippet, tags,
               } = article;
-              return <ArticleSnippet snippet={snippet} tags={tags} img={img} title={title} />;
+              return (
+                <ArticleSnippet
+                  snippet={snippet}
+                  tags={tags}
+                  img={img}
+                  title={title}
+                />
+              );
             })}
           </div>
           <div className="column__two">
@@ -134,7 +155,14 @@ const London = () => (
               const {
                 img = '', title, snippet, tags,
               } = article;
-              return <ArticleSnippet snippet={snippet} tags={tags} img={img} title={title} />;
+              return (
+                <ArticleSnippet
+                  snippet={snippet}
+                  tags={tags}
+                  img={img}
+                  title={title}
+                />
+              );
             })}
           </div>
         </section>

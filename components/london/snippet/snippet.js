@@ -1,6 +1,15 @@
-import React from 'react';
+import React, { memo } from 'react';
 import PropTypes from 'prop-types';
 
+/**
+ * Snippet Component
+ * @param img
+ * @param title
+ * @param snippet
+ * @param tags
+ * @returns {*}
+ * @constructor
+ */
 const Snippet = ({
   img = '', title, snippet, tags,
 }) => (
@@ -22,7 +31,7 @@ Snippet.propTypes = {
   img: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   snippet: PropTypes.string.isRequired,
-  tags: PropTypes.array.isRequired
+  tags: PropTypes.array.isRequired,
 };
 
-export default Snippet;
+export default memo(Snippet);

@@ -1,7 +1,7 @@
 {
   "scripts": {
     "dev": "next",
-    "build": "next build ----max-old-space-size=1024",
+    "build": "next build",
     "start": "NODE_ENV=production next start;",
     "pretty": "prettier --write --tab-width 2 \"*.js\"",
     "eslint": "eslint --fix *.js",
