@@ -1,20 +1,18 @@
 import React from 'react';
 import Router from 'next/router';
 
-const Error = () => {
-  <div>Coming Soon</div>;
-};
+const Error = () => (<div>Coming Soon</div>);
 
 /**
- *
+ * @todo Need to clean this up.
  * @param res
  * @param err
  * @returns {{statusCode: *}}
  */
 Error.getInitialProps = ({ res, err }) => {
-  const statusCode = res ? res.statusCode : err ? err.statusCode : null;
-
   if (res) {
+    const statusCode = err ? err.statusCode : null;
+
     if (statusCode === 404) {
       res.writeHead(302, {
         Location: '/home',
