@@ -1,0 +1,37 @@
+webpackHotUpdate("static/development/pages/index.js",{
+
+/***/ "./pages/index.js":
+/*!************************!*\
+  !*** ./pages/index.js ***!
+  \************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/router */ "./node_modules/next/dist/client/router.js");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+var redirect = function redirect(context, target) {
+  if (context.res) {
+    context.res.writeHead(303, {
+      location: target
+    });
+    context.res.end();
+  } else {
+    next_router__WEBPACK_IMPORTED_MODULE_1___default.a.replace(target);
+  }
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (function () {
+  return redirect({}, '/home');
+});
+
+/***/ })
+
+})
+//# sourceMappingURL=index.js.043fd15486aa076d0620.hot-update.js.map

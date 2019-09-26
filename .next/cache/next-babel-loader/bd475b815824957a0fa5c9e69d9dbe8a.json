@@ -1,0 +1,1 @@
+{"ast":null,"code":"export { default as Profile } from './netflix/profile/profile';\nexport { default as NetflixHeader } from './netflix/head/header';\nexport { default as ArticleSnippet } from './london/snippet/snippet';","map":null,"metadata":{},"sourceType":"module"}

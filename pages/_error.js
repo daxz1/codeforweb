@@ -1,7 +1,7 @@
 import React from 'react';
 import Router from 'next/router';
 
-const Error = () => (<div>Coming Soon</div>);
+const Error = () => <div>Coming Soon</div>;
 
 /**
  * @todo Need to clean this up.
