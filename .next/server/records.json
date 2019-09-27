@@ -27,17 +27,24 @@
       "static/XI690Pdb1UUOuiZPsuOuQ/pages/home.js": 3,
       "static/XI690Pdb1UUOuiZPsuOuQ/pages/index.js": 4,
       "static/XI690Pdb1UUOuiZPsuOuQ/pages/london.js": 5,
-      "static/XI690Pdb1UUOuiZPsuOuQ/pages/netflix.js": 6
+      "static/XI690Pdb1UUOuiZPsuOuQ/pages/netflix.js": 6,
+      "static/v2BC3-usP81jEqNXwYCqR/pages/_app.js": 7,
+      "static/v2BC3-usP81jEqNXwYCqR/pages/_document.js": 8,
+      "static/v2BC3-usP81jEqNXwYCqR/pages/_error.js": 9,
+      "static/v2BC3-usP81jEqNXwYCqR/pages/home.js": 10,
+      "static/v2BC3-usP81jEqNXwYCqR/pages/index.js": 11,
+      "static/v2BC3-usP81jEqNXwYCqR/pages/london.js": 12,
+      "static/v2BC3-usP81jEqNXwYCqR/pages/netflix.js": 13
     },
     "bySource": {},
     "usedIds": [
-      0,
-      1,
-      2,
-      3,
-      4,
-      5,
-      6
+      10,
+      11,
+      12,
+      13,
+      7,
+      8,
+      9
     ]
   }
 }

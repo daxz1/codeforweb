@@ -81,19 +81,25 @@
       "static/XI690Pdb1UUOuiZPsuOuQ/pages/index.js": 6,
       "static/XI690Pdb1UUOuiZPsuOuQ/pages/london.js": 7,
       "static/XI690Pdb1UUOuiZPsuOuQ/pages/netflix.js": 8,
-      "static/runtime/main.js": 9
+      "static/runtime/main.js": 9,
+      "static/v2BC3-usP81jEqNXwYCqR/pages/_app.js": 10,
+      "static/v2BC3-usP81jEqNXwYCqR/pages/_error.js": 11,
+      "static/v2BC3-usP81jEqNXwYCqR/pages/home.js": 12,
+      "static/v2BC3-usP81jEqNXwYCqR/pages/index.js": 13,
+      "static/v2BC3-usP81jEqNXwYCqR/pages/london.js": 14,
+      "static/v2BC3-usP81jEqNXwYCqR/pages/netflix.js": 15
     },
     "bySource": {},
     "usedIds": [
       0,
       1,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
       2,
-      3,
-      4,
-      5,
-      6,
-      7,
-      8,
       9
     ]
   }
