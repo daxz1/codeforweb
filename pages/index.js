@@ -15,6 +15,11 @@ const Home = () => (
             Flexbox, React, HTML5, CSS3: Simply clone of the profile page.
           </a>
         </div>
+        <div className="project project__fnlondon">
+          <a href="/london">
+            Flexbox, React, HTML5, CSS3: Simply clone of the homepage
+          </a>
+        </div>
       </section>
     </div>
   </>

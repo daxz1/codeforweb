@@ -57,5 +57,25 @@ body {
         }
       }
     }
+
+    &.project__fnlondon {
+      background:{
+        color: $carnation;
+        image: url("https://assets.fnlondon.com/s3/fn/fn_logo.svg");
+        repeat: no-repeat;
+        size: 100px 100px;
+        position: center center;
+      }
+      a {
+        color: $white;
+        text-decoration: none;
+        overflow: hidden;
+        margin: {
+          top: 200px;
+          left: 20px;
+          right: 20px;
+        }
+      }
+    }
   }
 }
