@@ -117,30 +117,28 @@ const Error = () => __jsx("div", {
     lineNumber: 4
   },
   __self: undefined
-}, "Coming Soon");
+}, "Coming to you");
 /**
- *
+ * @todo Need to clean this up.
  * @param res
- * @param err
  * @returns {{statusCode: *}}
  */
 
 
 Error.getInitialProps = ({
-  res,
-  err
+  res
 }) => {
   if (res) {
-    const statusCode = err ? err.statusCode : null;
+    const {
+      statusCode
+    } = res;
 
     if (statusCode === 404) {
       res.writeHead(302, {
         Location: '/home'
       });
-      res.end();
+      return res.end();
     }
-  } else {
-    next_router__WEBPACK_IMPORTED_MODULE_1___default.a.push('/home');
   }
 
   return {};

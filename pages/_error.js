@@ -1,26 +1,23 @@
 import React from 'react';
 import Router from 'next/router';
 
-const Error = () => <div>Coming Soon</div>;
+const Error = () => <div>Coming to you</div>;
 
 /**
  * @todo Need to clean this up.
  * @param res
- * @param err
  * @returns {{statusCode: *}}
  */
-Error.getInitialProps = ({ res, err }) => {
+Error.getInitialProps = ({ res }) => {
   if (res) {
-    const statusCode = err ? err.statusCode : null;
+    const { statusCode } = res;
 
     if (statusCode === 404) {
       res.writeHead(302, {
         Location: '/home',
       });
-      res.end();
+      return res.end();
     }
-  } else {
-    Router.push('/home');
   }
   return {};
 };

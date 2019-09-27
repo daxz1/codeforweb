@@ -8427,31 +8427,27 @@ var Error = function Error() {
       lineNumber: 4
     },
     __self: this
-  }, "Coming Soon");
+  }, "Coming to you");
 };
 /**
- *
+ * @todo Need to clean this up.
  * @param res
- * @param err
  * @returns {{statusCode: *}}
  */
 
 
 Error.getInitialProps = function (_ref) {
-  var res = _ref.res,
-      err = _ref.err;
+  var res = _ref.res;
 
   if (res) {
-    var statusCode = err ? err.statusCode : null;
+    var statusCode = res.statusCode;
 
     if (statusCode === 404) {
       res.writeHead(302, {
         Location: '/home'
       });
-      res.end();
+      return res.end();
     }
-  } else {
-    next_router__WEBPACK_IMPORTED_MODULE_1___default.a.push('/home');
   }
 
   return {};
@@ -8461,7 +8457,7 @@ Error.getInitialProps = function (_ref) {
 
 /***/ }),
 
-/***/ 4:
+/***/ 1:
 /*!*************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F_error&absolutePagePath=%2FUsers%2Fcheemad%2FProjects%2Fcodeforweb%2Fpages%2F_error.js ***!
   \*************************************************************************************************************************************/
@@ -8484,5 +8480,5 @@ module.exports = dll_01f9a3fa864a7b7414d8;
 
 /***/ })
 
-},[[4,"static/runtime/webpack.js"]]]);
+},[[1,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=_error.js.map

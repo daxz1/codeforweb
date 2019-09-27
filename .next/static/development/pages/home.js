@@ -93,7 +93,7 @@ var Home = function Home() {
 
 /***/ }),
 
-/***/ 0:
+/***/ 2:
 /*!*********************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fhome&absolutePagePath=%2FUsers%2Fcheemad%2FProjects%2Fcodeforweb%2Fpages%2Fhome.js ***!
   \*********************************************************************************************************************************/
@@ -116,5 +116,5 @@ module.exports = dll_01f9a3fa864a7b7414d8;
 
 /***/ })
 
-},[[0,"static/runtime/webpack.js","styles"]]]);
+},[[2,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=home.js.map
