@@ -8,13 +8,18 @@
 }
 
 .netflix {
-  background-color: $cod_gray;
+  background:{
+    color: $cod_gray;
+  }
   display: flex;
   flex-direction: column;
   height: 100vh;
   width: 100vw;
 
   .navigation {
+    background:{
+      color: $cod_gray;
+    }
     height: 68px;
     display: flex;
     justify-content: flex-start;
