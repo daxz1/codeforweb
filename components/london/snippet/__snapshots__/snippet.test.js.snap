@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`[RENDER] components/london/snippet/snippet.js Header Component renders 1`] = `
+exports[`[RENDER] components/london/snippet/snippet.js Head Component renders 1`] = `
 <article>
-  
+
   <h3>
     A year after the mutiny, HSBC plots its next investment banking overhaul
   </h3>

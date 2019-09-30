@@ -4,7 +4,7 @@ import renderer from 'react-test-renderer';
 import Snippet from './snippet';
 
 describe('[RENDER] components/london/snippet/snippet.js', () => {
-  it('Header Component renders', () => {
+  it('Head Component renders', () => {
     const component = renderer.create(
       <Snippet
         img=""

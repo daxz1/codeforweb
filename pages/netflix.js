@@ -1,5 +1,5 @@
 import React, { memo } from 'react';
-import { Profile, NetflixHeader } from '../components';
+import { Profile, SharedHead } from '../components';
 
 import '../styles/netflix/netflix.scss';
 
@@ -42,7 +42,7 @@ const PROFILES = [
  */
 const Netflix = () => (
   <>
-    <NetflixHeader />
+    <SharedHead title="Netflix Profile Example" />
     <div className="netflix">
       <div className="navigation">
         <div className="navigation__menu">

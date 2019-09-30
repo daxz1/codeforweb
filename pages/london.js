@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArticleSnippet } from '../components';
+import { ArticleSnippet, SharedHead } from '../components';
 
 import '../styles/london/london.scss';
 
@@ -88,6 +88,8 @@ const NAVIGATION = [
  * @constructor
  */
 const London = () => (
+  <>
+  <SharedHead title="FNLondon Example" />
   <div className="container">
     <nav className="navigation">
       <div className="brand">
@@ -98,7 +100,7 @@ const London = () => (
         {NAVIGATION.map((nav) => {
           const { title, path } = nav;
           return (
-            <li className="menu__item">
+            <li key={path} className="menu__item">
               <a className="menu__link" href={path}>
                 {title}
               </a>
@@ -237,6 +239,7 @@ const London = () => (
       </footer>
     </div>
   </div>
+  </>
 );
 
 export default London;

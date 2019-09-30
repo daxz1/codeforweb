@@ -1,4 +1,5 @@
 import React from 'react';
+import { SharedHead } from '../components';
 import '../styles/global/styles.scss';
 
 /**
@@ -8,6 +9,7 @@ import '../styles/global/styles.scss';
  */
 const Home = () => (
   <>
+    <SharedHead title="Code For Web" />
     <div className="home">
       <section className="projects">
         <div className="project project__netflix">

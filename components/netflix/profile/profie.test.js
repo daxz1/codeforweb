@@ -4,7 +4,7 @@ import renderer from 'react-test-renderer';
 import Profile from './profile';
 
 describe('[RENDER] components/netflix/profile/profile.js', () => {
-  it('Header Component renders', () => {
+  it('Head Component renders', () => {
     const component = renderer.create(
       <Profile
         name="Morwen"
