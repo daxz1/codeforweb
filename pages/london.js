@@ -130,7 +130,7 @@ const London = () => (
           </div>
 
           <div className="advert">
-            <img src="../static/london/62643.jpg" alt="Ads" />
+            <img src="../public/static/london/62643.jpg" alt="Ads" />
           </div>
         </header>
 
