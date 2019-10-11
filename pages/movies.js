@@ -1,5 +1,6 @@
-/*global fetch */
+/* global fetch */
 import React, { useState, useEffect } from 'react';
+import '../styles/movies/movies.scss';
 
 // http://www.omdbapi.com/?i=tt3896198&apikey=90e7dea
 
@@ -12,6 +13,19 @@ const CONFIG = [
     IMDB: 'tt6806448',
     CDN: 'https://cdn.filestackcontent.com/lLbUqxnRPO5FMULdCwXM',
   },
+  {
+    IMDB: 'tt5164214',
+    CDN: 'https://cdn.filestackcontent.com/uLVCKAI3QqSlxwMOBxJo',
+  },
+  {
+    IMDB: 'tt2283336',
+    CDN: 'https://cdn.filestackcontent.com/ty2BaOgmQJKKgQ93vDTy',
+  },
+  {
+    IMDB: 'tt6320628',
+    CDN: 'https://cdn.filestackcontent.com/c6BbCaRTn2OXwHo4gSg0',
+  },
+
 ];
 
 const Movies = () => {
@@ -37,11 +51,11 @@ const Movies = () => {
   }
 
   return (
-    <div>
+    <div className="container">
       {movies.map((movie) => {
         const { Title: title, CDN, Poster: poster } = movie;
         return (
-          <div key={title}>
+          <div key={title} className='movie'>
             <a href={CDN}>
               <img src={poster} alt={title} />
             </a>

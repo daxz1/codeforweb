@@ -24,6 +24,11 @@ const Home = () => (
             Flexbox, React, HTML5, CSS3.
           </a>
         </div>
+        <div className="project project__movies">
+          <a href="/movies">
+            Flexbox, React, HTML5, CSS3.
+          </a>
+        </div>
       </section>
     </div>
   </>
