@@ -14,12 +14,14 @@ const Home = () => (
       <section className="projects">
         <div className="project project__netflix">
           <a href="/netflix">
-            Flexbox, React, HTML5, CSS3: Simply clone of the profile page.
+            Simple clone of the Netflix profile page. Built using Flexbox,
+            React, HTML5, CSS3.
           </a>
         </div>
         <div className="project project__fnlondon">
           <a href="/london">
-            Flexbox, React, HTML5, CSS3: Simply clone of the homepage
+            Simple clone of FN London homepage - Incomplete. Built using
+            Flexbox, React, HTML5, CSS3.
           </a>
         </div>
       </section>

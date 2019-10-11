@@ -81,7 +81,6 @@ const NAVIGATION = [
   },
 ];
 
-
 /**
  *
  * @returns {*}
@@ -89,156 +88,156 @@ const NAVIGATION = [
  */
 const London = () => (
   <>
-  <SharedHead title="FNLondon Example" />
-  <div className="container">
-    <nav className="navigation">
-      <div className="brand">
-        <div className="brand__logo" />
-        <div className="brand__name">Financial News</div>
-      </div>
-      <ul className="navigation__menu">
-        {NAVIGATION.map((nav) => {
-          const { title, path } = nav;
-          return (
-            <li key={path} className="menu__item">
-              <a className="menu__link" href={path}>
-                {title}
-              </a>
-            </li>
-          );
-        })}
-      </ul>
-    </nav>
-    <div className="main__container">
-      <header className="main__container__header">
-        <div className="register">
-          <div className="register__content">
-            <div>
-              <p>
-                Become a member. Join to access the insight and analysis
-                powering the financial sector.
-              </p>
-            </div>
-            <div className="button__container">
-              <a className="button" href="/">
-                Sign In
-              </a>
-              <a className="button button--alternative" href="/">
-                Subscribe
-              </a>
+    <SharedHead title="FNLondon Example" />
+    <div className="container">
+      <nav className="navigation">
+        <div className="brand">
+          <div className="brand__logo" />
+          <div className="brand__name">Financial News</div>
+        </div>
+        <ul className="navigation__menu">
+          {NAVIGATION.map((nav) => {
+            const { title, path } = nav;
+            return (
+              <li key={path} className="menu__item">
+                <a className="menu__link" href={path}>
+                  {title}
+                </a>
+              </li>
+            );
+          })}
+        </ul>
+      </nav>
+      <div className="main__container">
+        <header className="main__container__header">
+          <div className="register">
+            <div className="register__content">
+              <div>
+                <p>
+                  Become a member. Join to access the insight and analysis
+                  powering the financial sector.
+                </p>
+              </div>
+              <div className="button__container">
+                <a className="button" href="/">
+                  Sign In
+                </a>
+                <a className="button button--alternative" href="/">
+                  Subscribe
+                </a>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div className="advert">
-          <img src="../static/london/62643.jpg" alt="Ads" />
-        </div>
-      </header>
+          <div className="advert">
+            <img src="../static/london/62643.jpg" alt="Ads" />
+          </div>
+        </header>
 
-      <main className="main">
-        <section className="main__body">
+        <main className="main">
+          <section className="main__body">
+            <div className="column__one">
+              {ARTICLE_COLUMN_ONE.map((article) => {
+                const {
+                  img = '', title, snippet, tags,
+                } = article;
+                return (
+                  <ArticleSnippet
+                    snippet={snippet}
+                    tags={tags}
+                    img={img}
+                    title={title}
+                  />
+                );
+              })}
+            </div>
+            <div className="column__two">
+              {ARTICLE_COLUMN_TWO.map((article) => {
+                const {
+                  img = '', title, snippet, tags,
+                } = article;
+                return (
+                  <ArticleSnippet
+                    snippet={snippet}
+                    tags={tags}
+                    img={img}
+                    title={title}
+                  />
+                );
+              })}
+            </div>
+          </section>
+          <aside className="main__right">
+            <h3>Filter by Topic</h3>
+            <div className="tags">
+              <ul>
+                <li>Interactive</li>
+                <li>Asset Management</li>
+                <li>Lists</li>
+                <li>ETFs</li>
+                <li>Regulation</li>
+                <li>FinTech</li>
+                <li>Trading</li>
+                <li>Real Estate</li>
+                <li>Web Casts</li>
+              </ul>
+            </div>
+          </aside>
+        </main>
+        <footer className="footer">
           <div className="column__one">
-            {ARTICLE_COLUMN_ONE.map((article) => {
-              const {
-                img = '', title, snippet, tags,
-              } = article;
-              return (
-                <ArticleSnippet
-                  snippet={snippet}
-                  tags={tags}
-                  img={img}
-                  title={title}
-                />
-              );
-            })}
+            <address>
+              © 2019 FINANCIAL NEWS
+              {' '}
+              <br />
+              The News Building
+              {' '}
+              <br />
+1 London Bridge Street
+              {' '}
+              <br />
+              London, SE1 9GF
+              {' '}
+              <br />
+            </address>
           </div>
           <div className="column__two">
-            {ARTICLE_COLUMN_TWO.map((article) => {
-              const {
-                img = '', title, snippet, tags,
-              } = article;
-              return (
-                <ArticleSnippet
-                  snippet={snippet}
-                  tags={tags}
-                  img={img}
-                  title={title}
-                />
-              );
-            })}
-          </div>
-        </section>
-        <aside className="main__right">
-          <h3>Filter by Topic</h3>
-          <div className="tags">
+            <strong>Profile</strong>
             <ul>
-              <li>Interactive</li>
-              <li>Asset Management</li>
-              <li>Lists</li>
-              <li>ETFs</li>
-              <li>Regulation</li>
-              <li>FinTech</li>
-              <li>Trading</li>
-              <li>Real Estate</li>
-              <li>Web Casts</li>
+              <li>Subscribe</li>
+              <li>Sign In</li>
+              <li>Reset Password</li>
             </ul>
           </div>
-        </aside>
-      </main>
-      <footer className="footer">
-        <div className="column__one">
-          <address>
-            © 2019 FINANCIAL NEWS
-            {' '}
-            <br />
-            The News Building
-            {' '}
-            <br />
-1 London Bridge Street
-            {' '}
-            <br />
-            London, SE1 9GF
-            {' '}
-            <br />
-          </address>
-        </div>
-        <div className="column__two">
-          <strong>Profile</strong>
-          <ul>
-            <li>Subscribe</li>
-            <li>Sign In</li>
-            <li>Reset Password</li>
-          </ul>
-        </div>
-        <div className="column__three">
-          <strong>About</strong>
-          <ul>
-            <li>Feedback</li>
-            <li>Contact Us</li>
-            <li>FAQ</li>
-            <li>Copyright Licenses</li>
-            <li>Privacy Policy</li>
-            <li>Cookie Policy</li>
-            <li>Terms & Conditions</li>
-            <li>Corrections</li>
-            <li>Tips</li>
-          </ul>
-        </div>
-        <div className="column__four">
-          <strong>Sections</strong>
-          <ul>
-            <li>News</li>
-            <li>Views</li>
-            <li>People</li>
-            <li>Brexit</li>
-            <li>Asset Management</li>
-            <li>Investment Banking</li>
-            <li>Trading</li>
-          </ul>
-        </div>
-      </footer>
+          <div className="column__three">
+            <strong>About</strong>
+            <ul>
+              <li>Feedback</li>
+              <li>Contact Us</li>
+              <li>FAQ</li>
+              <li>Copyright Licenses</li>
+              <li>Privacy Policy</li>
+              <li>Cookie Policy</li>
+              <li>Terms & Conditions</li>
+              <li>Corrections</li>
+              <li>Tips</li>
+            </ul>
+          </div>
+          <div className="column__four">
+            <strong>Sections</strong>
+            <ul>
+              <li>News</li>
+              <li>Views</li>
+              <li>People</li>
+              <li>Brexit</li>
+              <li>Asset Management</li>
+              <li>Investment Banking</li>
+              <li>Trading</li>
+            </ul>
+          </div>
+        </footer>
+      </div>
     </div>
-  </div>
   </>
 );
 
