@@ -1,23 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1569342882163" clover="3.2.0">
-  <project timestamp="1569342882163" name="All files">
-    <metrics statements="9" coveredstatements="9" conditionals="3" coveredconditionals="1" methods="4" coveredmethods="4" elements="16" coveredelements="14" complexity="0" loc="9" ncloc="9" packages="3" files="3" classes="3"/>
+<coverage generated="1570832356682" clover="3.2.0">
+  <project timestamp="1570832356682" name="All files">
+    <metrics statements="7" coveredstatements="7" conditionals="3" coveredconditionals="1" methods="3" coveredmethods="3" elements="13" coveredelements="11" complexity="0" loc="7" ncloc="7" packages="2" files="2" classes="2"/>
     <package name="london.snippet">
       <metrics statements="4" coveredstatements="4" conditionals="3" coveredconditionals="1" methods="2" coveredmethods="2"/>
       <file name="snippet.js" path="/Users/cheemad/Projects/codeforweb/components/london/snippet/snippet.js">
         <metrics statements="4" coveredstatements="4" conditionals="3" coveredconditionals="1" methods="2" coveredmethods="2"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="7" count="1" type="stmt"/>
-        <line num="14" count="3" type="stmt"/>
-        <line num="21" count="1" type="stmt"/>
-      </file>
-    </package>
-    <package name="netflix.head">
-      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <file name="header.js" path="/Users/cheemad/Projects/codeforweb/components/netflix/head/header.js">
-        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="5" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="23" count="3" type="stmt"/>
+        <line num="30" count="1" type="stmt"/>
       </file>
     </package>
     <package name="netflix.profile">

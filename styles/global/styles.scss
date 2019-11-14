@@ -29,7 +29,7 @@ body {
     justify-content: center;
     align-items: center;
     width: 400px;
-    height: 400px;
+    height: 225px;
     margin: 1rem;
     border-radius: 3px;
 
@@ -37,44 +37,21 @@ body {
       transform: scale(0.8);
     }
 
+    a {
+      color: $white;
+      text-decoration: none;
+      overflow: hidden;
+      margin: 70px 20px 20px 20px;
+      text-align: center;
+    }
+
     &.project__netflix {
       background: {
         color: $cod_gray;
         image: url("https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg");
         repeat: no-repeat;
-        size: 200px 200px;
-        position: center center;
-      }
-
-      a {
-        color: $white;
-        text-decoration: none;
-        overflow: hidden;
-        margin: {
-          top: 200px;
-          left: 20px;
-          right: 20px;
-        }
-      }
-    }
-
-    &.project__fnlondon {
-      background:{
-        color: $carnation;
-        image: url("https://assets.fnlondon.com/s3/fn/fn_logo.svg");
-        repeat: no-repeat;
-        size: 100px 100px;
-        position: center center;
-      }
-      a {
-        color: $white;
-        text-decoration: none;
-        overflow: hidden;
-        margin: {
-          top: 200px;
-          left: 20px;
-          right: 20px;
-        }
+        size: 150px 150px;
+        position: top center;
       }
     }
 
@@ -85,18 +62,6 @@ body {
         size: 100px 100px;
         position: center center;
       }
-      a {
-        color: $white;
-        text-decoration: none;
-        overflow: hidden;
-        margin: {
-          top: 200px;
-          left: 20px;
-          right: 20px;
-        }
-      }
     }
-
-
   }
 }

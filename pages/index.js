@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { SharedHead } from '../components';
 import '../styles/global/styles.scss';
 
@@ -13,19 +14,13 @@ const Home = () => (
     <div className="home">
       <section className="projects">
         <div className="project project__netflix">
-          <a href="/netflix">
+          <Link href="/netflix">
             Simple clone of the Netflix profile page. Built using Flexbox,
             React, HTML5, CSS3.
-          </a>
-        </div>
-        <div className="project project__fnlondon">
-          <a href="/london">
-            Simple clone of FN London homepage - Incomplete. Built using
-            Flexbox, React, HTML5, CSS3.
-          </a>
+          </Link>
         </div>
         <div className="project project__movies">
-          <a href="/movies">Flexbox, React, HTML5, CSS3.</a>
+          <Link href="/movies">Flexbox, React, HTML5, CSS3.</Link>
         </div>
       </section>
     </div>

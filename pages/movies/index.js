@@ -1,9 +1,16 @@
 /* global fetch */
 import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { withRedux } from '../../lib/redux';
 import '../../styles/movies/movies.scss';
 import { CONFIG } from '../../data/movies/movies';
 
-export default () => {
+/**
+ *
+ * @returns {*}
+ * @constructor
+ */
+const Movies = () => {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
@@ -29,16 +36,23 @@ export default () => {
     <div className="container">
       {movies.map((movie) => {
         const {
-          Title: title, Poster: poster, imdbID: imdb,
+          Title: title,
+          Poster: poster,
+          imdbID: imdb,
+          Actors: actors,
         } = movie;
         return (
           <div key={title} className="movie">
-            <a href={`/movies/${imdb}`}>
-              <img src={poster} alt={title} />
-            </a>
+            <Link href={`/movies/${imdb}`}>
+              <a>
+                <img src={poster} alt={title} />
+              </a>
+            </Link>
           </div>
         );
       })}
     </div>
   );
 };
+
+export default withRedux(Movies);
