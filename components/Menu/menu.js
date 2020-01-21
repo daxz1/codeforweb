@@ -43,4 +43,4 @@ const Menu = () => {
   )
 };
 
-export default Menu;
+export default memo(Menu);

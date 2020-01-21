@@ -1,6 +1,9 @@
 import React from 'react';
 import Head from "next/head";
-import {Layout} from "../components";
+import {
+  Layout,
+  HeroArticle
+} from "../components";
 import fetch from 'isomorphic-unfetch'
 import {format} from 'date-fns';
 
@@ -10,17 +13,10 @@ import {format} from 'date-fns';
  * @returns {*}
  * @constructor
  */
-const HomePage = (articles) => {
+const HomePage = ({ heroArticle, leftArticles, rightArticles}) => {
 
-  const {
-    source,
-    urlToImage,
-    author,
-    publishedAt,
-    title,
-    description
-  } = articles[0];
-
+  // console.log(articles);
+  // return <div>a</div>;
 
   return (
     <Layout>
@@ -31,29 +27,20 @@ const HomePage = (articles) => {
       <section className='section'>
         <div className='columns is-multiline'>
           <div className='column is-two-thirds'>
-            <div className='article'>
-              <h1 className='title is-4'>{title}</h1>
-              <div>
-                <img src={urlToImage} className='article__image'/>
-                <p
-                  className='subtitle is-7 article--credits'>By <strong>{author}</strong> from {source.name} on {format(new Date(publishedAt), 'EEEE Do MMMM yyyy pppp')}
-                </p>
-              </div>
-              <h2 className='subtitle is-6'>{description}</h2>
-            </div>
+            <HeroArticle article={heroArticle}/>
           </div>
 
           <div className='column'>
             <div className='columns is-multiline'>
 
-              {Object.keys(articles).map((article, key) => {
+              {Object.keys(rightArticles).map((article, key) => {
                 if (article !== 'url' && key !== 0) {
                   const {
                     source,
                     author,
                     publishedAt,
                     title,
-                  } = articles[article];
+                  } = rightArticles[article];
 
                   return (<div className='column is-half-desktop is-full-tablet is-full-mobile'>
                       <div className='article'>
@@ -79,10 +66,27 @@ const HomePage = (articles) => {
 
 HomePage.getInitialProps = async () => {
   try {
-    const res = await fetch('https://newsapi.org/v2/top-headlines?country=us&apiKey=d6fd84244a5240e49fbabded8f5ac2b3&pageSize=10');
+    const res = await fetch('https://newsapi.org/v2/top-headlines?country=us&apiKey=d6fd84244a5240e49fbabded8f5ac2b3');
     const {status, articles} = await res.json();
 
     if (status === 'ok') {
+      const right = Math.floor(articles.length / 2);
+      const rightArticles = articles.slice(0, right - 1);
+      const leftArticles = articles.slice(right - 1, articles.length);
+
+      console.log({
+        rightArticles,
+        leftArticles,
+        heroArticle: articles[0]
+      });
+
+
+      return {
+        rightArticles,
+        leftArticles,
+        heroArticle: articles[0]
+      };
+
       return articles;
     }
     return {};
