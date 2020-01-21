@@ -1,1 +1,0 @@
-{"ast":null,"code":"export { default as Layout } from './Layout/layout';","map":{"version":3,"sources":["/Users/cheemad/Projects/codeforweb/components/index.js"],"names":["default","Layout"],"mappings":"AAAA,SAASA,OAAO,IAAIC,MAApB,QAAkC,iBAAlC","sourcesContent":["export { default as Layout } from './Layout/layout';\n"]},"metadata":{},"sourceType":"module"}
