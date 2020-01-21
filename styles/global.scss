@@ -1,0 +1,83 @@
+//@import url('https://fonts.googleapis.com/css?family=Raleway:400,700,800');
+
+*, *:after, *:before { -webkit-box-sizing: border-box; box-sizing: border-box; }
+html {
+  //height: 100%;
+}
+
+body {
+  height: 100%;
+  //font-family: 'Raleway', Arial, sans-serif;
+  //background-color: blue;
+  //color: red;
+
+}
+
+a {
+  color: #4e4a46;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: #c94e50;
+  }
+}
+
+//
+// Burger menu custom styles
+//
+.bm-burger-button {
+  position: relative;
+  width: 36px;
+  height: 30px;
+  left: 36px;
+  top: 36px;
+}
+
+.bm-burger-bars {
+  background: #c94e50;
+}
+
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+.bm-menu {
+  background: #373a47;
+
+  a {
+    color: #b8b7ad;
+
+    &:hover,
+    &:focus {
+      color: #c94e50;
+    }
+  }
+}
+
+.bm-item-list a {
+  padding: 0.8em;
+
+  span {
+    margin-left: 10px;
+    font-weight: 700;
+  }
+}
+
+.bm-item:focus {
+  outline: none;
+}
+
+// Hero
+.hero--custom {
+  border: 1px solid #D3D3D3;
+  border-radius: 3px;
+  -webkit-box-shadow: 10px 10px 14px 0px rgba(0,0,0,0.12);
+  -moz-box-shadow: 10px 10px 14px 0px rgba(0,0,0,0.12);
+  box-shadow: 10px 10px 14px 0px rgba(0,0,0,0.12);
+  //padding: 5px;
+  img {
+    border-radius: 3px;
+    border: 1px solid black;
+  }
+}
