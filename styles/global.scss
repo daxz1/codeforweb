@@ -69,15 +69,20 @@ a {
 }
 
 // Hero
-.hero--custom {
+.article {
   border: 1px solid #D3D3D3;
   border-radius: 3px;
   -webkit-box-shadow: 10px 10px 14px 0px rgba(0,0,0,0.12);
   -moz-box-shadow: 10px 10px 14px 0px rgba(0,0,0,0.12);
   box-shadow: 10px 10px 14px 0px rgba(0,0,0,0.12);
-  //padding: 5px;
-  img {
+  padding: 20px;
+  .article--credits {
+    margin: 0.8rem 0 0.8rem 0
+  }
+  .article__image {
     border-radius: 3px;
     border: 1px solid black;
   }
 }
+
+
