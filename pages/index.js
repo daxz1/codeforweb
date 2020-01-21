@@ -28,11 +28,36 @@ const HomePage = ({ heroArticle, leftArticles, rightArticles}) => {
         <div className='columns is-multiline'>
           <div className='column is-two-thirds'>
             <HeroArticle article={heroArticle}/>
+
+            <div className='columns is-multiline'>
+              {Object.keys(leftArticles).map((article, key) => {
+                if (article !== 'url' && key !== 0) {
+                  const {
+                    source,
+                    author,
+                    publishedAt,
+                    title,
+                  } = leftArticles[article];
+
+                  return (<div className='column is-full'>
+                      <div className='article'>
+                        <h1 className='title is-6'>{title}</h1>
+                        <div>
+                          <p
+                            className='subtitle is-7 article--credits'>By <strong>{author}</strong> from {source.name} on {format(new Date(publishedAt), 'EEEE Do MMMM yyyy pppp')}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  )
+                }
+              })}
+            </div>
           </div>
+
 
           <div className='column'>
             <div className='columns is-multiline'>
-
               {Object.keys(rightArticles).map((article, key) => {
                 if (article !== 'url' && key !== 0) {
                   const {
@@ -73,13 +98,6 @@ HomePage.getInitialProps = async () => {
       const right = Math.floor(articles.length / 2);
       const rightArticles = articles.slice(0, right - 1);
       const leftArticles = articles.slice(right - 1, articles.length);
-
-      console.log({
-        rightArticles,
-        leftArticles,
-        heroArticle: articles[0]
-      });
-
 
       return {
         rightArticles,

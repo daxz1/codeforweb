@@ -11,7 +11,7 @@ const HeroArticle = ({ article }) => {
     description
   } = article;
   return (
-    <div className='article'>
+    <div className='article' style={{marginBottom: '1.5rem'}}>
       <h1 className='title is-4'>{title}</h1>
       <div>
         <img src={urlToImage} className='article__image'/>
