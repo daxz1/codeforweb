@@ -13,5 +13,9 @@ module.exports = withCSS(withSass({
     });
 
     return config;
-  }
+  },
+  experimental: {
+    cpus: 1,
+  },
 }));
+
