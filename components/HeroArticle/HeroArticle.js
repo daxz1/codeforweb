@@ -24,4 +24,4 @@ const HeroArticle = ({ article }) => {
   )
 };
 
-export default HeroArticle;
+export default memo(HeroArticle);

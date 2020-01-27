@@ -86,3 +86,57 @@ a {
 }
 
 
+/// Traffic
+
+.traffic {
+  width: 120px;
+  height: 320px;
+  border: 1px solid #333333;
+  display: block;
+  border-radius: 10px;
+  background: #333333;
+  .light {
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    margin: 25px auto;
+
+    &.active {
+      opacity: 1;
+      //animation: blink1 1.1s step-end infinite;
+    }
+  }
+
+  .light--green {
+    background-color: #00FF00;
+    opacity: 0.1;
+  }
+
+  .light--red {
+    background-color: #FF0000;
+    border: 1px solid #FF0000;
+    opacity: 0.1;
+  }
+
+  .light--amber {
+    background-color: #FFFF00;
+    border: 1px solid #FFFF00;
+    opacity: 0.1;
+  }
+
+}
+
+//@keyframes blink1 {
+//  0% {
+//    //background-color: red;
+//    box-shadow: 0 0 6em lighten(#00FF00, 0%);
+//  }
+//
+//  50% {
+//    background-color: darken(#00FF00, 15%);
+//    box-shadow: 0 0 0 transparent;
+//  }
+//
+//}
+
+

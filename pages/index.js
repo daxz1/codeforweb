@@ -65,12 +65,14 @@ const HomePage = ({ heroArticle, leftArticles, rightArticles}) => {
                     author,
                     publishedAt,
                     title,
+                    urlToImage
                   } = rightArticles[article];
 
                   return (<div className='column is-half-desktop is-full-tablet is-full-mobile'>
                       <div className='article'>
                         <h1 className='title is-6'>{title}</h1>
                         <div>
+                          <img src={urlToImage} className='article__image'/>
                           <p
                             className='subtitle is-7 article--credits'>By <strong>{author}</strong> from {source.name} on {format(new Date(publishedAt), 'EEEE Do MMMM yyyy pppp')}
                           </p>
@@ -88,24 +90,24 @@ const HomePage = ({ heroArticle, leftArticles, rightArticles}) => {
   )
 };
 
-
 HomePage.getInitialProps = async () => {
   try {
     const res = await fetch('https://newsapi.org/v2/top-headlines?country=us&apiKey=d6fd84244a5240e49fbabded8f5ac2b3');
-    const {status, articles} = await res.json();
+    const {
+      status,
+      articles
+    } = await res.json();
 
     if (status === 'ok') {
       const right = Math.floor(articles.length / 2);
       const rightArticles = articles.slice(0, right - 1);
       const leftArticles = articles.slice(right - 1, articles.length);
-
       return {
         rightArticles,
         leftArticles,
         heroArticle: articles[0]
       };
 
-      return articles;
     }
     return {};
   } catch (e) {

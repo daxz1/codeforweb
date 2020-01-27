@@ -16,12 +16,12 @@ const MenuConfig = [
   {
     icon: faHome,
     href: '/',
-    title: 'Home'
+    title: 'News'
   },
   {
     icon: faNewspaper,
-    href: '/',
-    title: 'News'
+    href: '/traffic',
+    title: 'Traffic Lights'
   },
   {
     icon: faClock,
