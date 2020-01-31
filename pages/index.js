@@ -13,11 +13,7 @@ import {format} from 'date-fns';
  * @returns {*}
  * @constructor
  */
-const HomePage = ({ heroArticle, leftArticles, rightArticles}) => {
-
-  // console.log(articles);
-  // return <div>a</div>;
-
+const HomePage = ({heroArticle, leftArticles, rightArticles}) => {
   return (
     <Layout>
       <Head>
@@ -39,7 +35,8 @@ const HomePage = ({ heroArticle, leftArticles, rightArticles}) => {
                     title,
                   } = leftArticles[article];
 
-                  return (<div className='column is-full'>
+                  return (
+                    <div className='column is-full' key={Math.round(Math.random() * 1000000)}>
                       <div className='article'>
                         <h1 className='title is-6'>{title}</h1>
                         <div>
@@ -68,7 +65,8 @@ const HomePage = ({ heroArticle, leftArticles, rightArticles}) => {
                     urlToImage
                   } = rightArticles[article];
 
-                  return (<div className='column is-half-desktop is-full-tablet is-full-mobile'>
+                  return (
+                    <div className='column is-half-desktop is-full-tablet is-full-mobile' key={Math.round(Math.random() * 1000000)}>
                       <div className='article'>
                         <h1 className='title is-6'>{title}</h1>
                         <div>

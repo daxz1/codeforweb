@@ -14,16 +14,19 @@ import 'bulma/bulma.sass';
 
 const MenuConfig = [
   {
+    id: 1,
     icon: faHome,
     href: '/',
     title: 'News'
   },
   {
+    id: 2,
     icon: faNewspaper,
     href: '/traffic',
     title: 'Traffic Lights'
   },
   {
+    id: 3,
     icon: faClock,
     href: '/',
     title: 'Netflix'
@@ -35,9 +38,9 @@ const Menu = () => {
       <M>
         { Object.keys(MenuConfig).map((item, key) => {
           const {
-            icon, href, title
+            id, icon, href, title
           } = MenuConfig[item];
-          return (<a href={href}><FontAwesomeIcon icon={icon} /><span>{title}</span></a>)
+          return (<a key={id} href={href}><FontAwesomeIcon icon={icon} /><span>{title}</span></a>)
         })}
       </M>
   )
