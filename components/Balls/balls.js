@@ -38,7 +38,7 @@ class Balls extends Component {
     const { x, fill } = this.props;
     const { y } = this.state;
     return (
-        <svg>
+        <svg className='svg'>
           <Ball x={x} y={y} fill={fill}/>
         </svg>
     )

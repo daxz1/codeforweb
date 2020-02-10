@@ -58,6 +58,7 @@ class Bounce extends Component {
   onMouseDown = (event) => {
     const x = event.clientX;
     const y = event.clientY;
+    console.log({x, y});
     const fill = colors[Math.floor(Math.random() * colors.length)];
     this.setState(prevState => ({
       balls: [...prevState.balls, {id: id++, x, y, fill}]
@@ -69,7 +70,7 @@ class Bounce extends Component {
       balls
     } = this.state;
     return (
-      <div className="container" onMouseDown={this.onMouseDown}>
+      <div className="balls--container" onMouseDown={this.onMouseDown}>
         {balls.map((ball) => {
           const { id, x, y, fill } = ball;
           return (<Balls key={id} x={x} y={y} fill={fill}/>)
