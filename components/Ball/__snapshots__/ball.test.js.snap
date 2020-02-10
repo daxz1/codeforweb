@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BALL TEST SUITE Ball Renders Correctly 1`] = `
+<circle
+  cx="0"
+  cy="0"
+  fill="#fffff"
+  r={5}
+/>
+`;

@@ -12,7 +12,7 @@ import '../../styles/normalize.scss';
 import '../../styles/global.scss';
 import 'bulma/bulma.sass';
 
-const MenuConfig = [
+const CONFIG = [
   {
     id: 1,
     icon: faHome,
@@ -31,15 +31,21 @@ const MenuConfig = [
     href: '/',
     title: 'Netflix'
   },
+  {
+    id: 4,
+    icon: faClock,
+    href: '/bounce',
+    title: 'Bounce'
+  }
 ];
 
 const Menu = () => {
   return (
       <M>
-        { Object.keys(MenuConfig).map((item, key) => {
+        { Object.keys(CONFIG).map((item, key) => {
           const {
             id, icon, href, title
-          } = MenuConfig[item];
+          } = CONFIG[item];
           return (<a key={id} href={href}><FontAwesomeIcon icon={icon} /><span>{title}</span></a>)
         })}
       </M>

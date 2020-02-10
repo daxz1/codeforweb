@@ -41,16 +41,18 @@ export default () => {
       </Head>
       <div className='section'>
         <div className='container'>
-          <div className='columns is-centered'>
-            <div className='column is-one-fifth'>
+          <div className='columns'>
+            <div className='column'>
               <div className='traffic'>
                 <div className={light === 'green' ? 'light light--green active' : 'light light--green'} />
                 <div className={light === 'amber' ? 'light light--amber active' : 'light light--amber'} />
                 <div className={light === 'red' ? 'light light--red active' : 'light light--red'} />
               </div>
             </div>
-            <div className='column'>
-              <button className={`button is-danger ${isLoading ? 'is-loading'  : ''}`} onClick={onClick}>
+          </div>
+          <div className='columns is-centered'>
+            <div className='column is-half'>
+              <button className={`button is-centered is-danger ${isLoading ? 'is-loading'  : ''}`} onClick={onClick}>
                 Stop
               </button>
             </div>

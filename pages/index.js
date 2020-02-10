@@ -23,8 +23,10 @@ const HomePage = ({heroArticle, leftArticles, rightArticles}) => {
       <section className='section'>
         <div className='columns is-multiline'>
           <div className='column is-two-thirds'>
+            <h1 className='title is-4 is-dark'>Breaking News</h1>
             <HeroArticle article={heroArticle}/>
 
+            <h3 className='title is-4 is-dark'>Europe</h3>
             <div className='columns is-multiline'>
               {Object.keys(leftArticles).map((article, key) => {
                 if (article !== 'url' && key !== 0) {
