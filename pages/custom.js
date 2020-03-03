@@ -34,11 +34,20 @@ export default class Custom extends Base {
     }
 
     return (
-      <div>
+      <div style={{fontFamily: 'courier', fontSize: '11px'}}>
+        <p>This page demonstrates a custom store built in Vanilla JS.</p>
+        <p>Sources:</p>
+        <p>
+          <a href='https://css-tricks.com/build-a-state-management-system-with-vanilla-javascript/'>
+            Build a state management system with vanilla JavaScript
+          </a>
+        </p>
+        <br />
         <button onClick={this.onClick}>Add</button>
+        <br /> <br />
         {
           store.state.items.map((item) => {
-            return <div style={{fontFamily: 'courier', fontSize: '11px', letterSpacing: '2px'}}>{`{id: ${item.id}}`}</div>
+            return <div>{`{id: ${item.id}}`}</div>
           })
         }
       </div>
