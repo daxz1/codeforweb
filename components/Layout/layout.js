@@ -4,7 +4,6 @@ import Menu from "../Menu/menu";
 
 import '../../styles/normalize.scss';
 import '../../styles/global.scss';
-
 import 'bulma/bulma.sass';
 
 const Layout = ({ children }) => {
