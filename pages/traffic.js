@@ -18,10 +18,9 @@ export default () => {
       setLight(state);
       await sleep(2000);
     }
-  };
+  }
 
-
-  const onClickAdd = useCallback(() => {
+  const onClick = useCallback(() => {
     setIsLoading(true);
     start(['green', 'amber', 'red'])
       .then(()=> {
@@ -31,9 +30,7 @@ export default () => {
         setIsLoading(false);
     });
   });
-
-
-
+  
   return (
     <Layout>
       <Head>
