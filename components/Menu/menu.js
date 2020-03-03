@@ -3,7 +3,9 @@ import React, { memo } from 'react';
 import {
   faHome,
   faNewspaper,
-  faClock
+  faIcicles,
+  faBaseballBall,
+  faTv
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { slide as M } from 'react-burger-menu';
@@ -27,15 +29,21 @@ const CONFIG = [
   },
   {
     id: 3,
-    icon: faClock,
+    icon: faTv,
     href: '/',
     title: 'Netflix'
   },
   {
     id: 4,
-    icon: faClock,
+    icon: faBaseballBall,
     href: '/bounce',
     title: 'Bounce'
+  },
+  {
+    id: 5,
+    icon: faIcicles,
+    href: '/custom',
+    title: 'Custom Store'
   }
 ];
 

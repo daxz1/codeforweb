@@ -21,7 +21,7 @@ export default () => {
   };
 
 
-  const onClick = useCallback(() => {
+  const onClickAdd = useCallback(() => {
     setIsLoading(true);
     start(['green', 'amber', 'red'])
       .then(()=> {

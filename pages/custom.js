@@ -3,6 +3,11 @@ import Store from '../experimental/state/store';
 import actions from '../experimental/state/actions';
 import mutations from "../experimental/state/mutations";
 import Base from "../experimental/state/base";
+import Head from "next/head";
+import {
+  Layout,
+  HeroArticle
+} from "../components";
 
 let id = 0;
 
@@ -23,17 +28,18 @@ export default class Custom extends Base {
     super({props, store});
   }
 
-  onClick () {
+  onClickAdd () {
     store.dispatch('add', { id: id++ });
+  }
+
+  onClickRemove () {
+    store.dispatch('remove');
   }
 
   render () {
 
-    if(store.state.items.length === 0) {
-      return(<p class="no-items">You've done nothing yet &#x1f622;</p>);
-    }
-
     return (
+      <Layout>
       <div style={{fontFamily: 'courier', fontSize: '11px'}}>
         <p>This page demonstrates a custom store built in Vanilla JS.</p>
         <p>Sources:</p>
@@ -43,7 +49,8 @@ export default class Custom extends Base {
           </a>
         </p>
         <br />
-        <button onClick={this.onClick}>Add</button>
+        <button onClick={this.onClickAdd}>Add</button>
+        <button onClick={this.onClickRemove}>Remove</button>
         <br /> <br />
         {
           store.state.items.map((item) => {
@@ -51,6 +58,7 @@ export default class Custom extends Base {
           })
         }
       </div>
+      </Layout>
     )
 
 

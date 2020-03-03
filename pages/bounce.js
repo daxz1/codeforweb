@@ -50,7 +50,7 @@ const colors = [
   "#dba2e6", "#76fc1b", "#608fa4", "#20f6ba", "#07d7f6", "#dce77a", "#77ecca"];
 
 
-class Bounce extends Component {
+export default class Bounce extends Component {
   state = {
     balls: []
   };
@@ -79,18 +79,3 @@ class Bounce extends Component {
     )
   }
 }
-
-
-
-// const Bounce = () => {
-//   return (
-//     <Layout>
-//       <Head>
-//         <title>Bounce</title>
-//       </Head>
-//       Hello
-//     </Layout>
-//   )
-// };
-
-export default Bounce
