@@ -30,16 +30,17 @@ export default () => {
         setIsLoading(false);
     });
   });
-  
+
   return (
     <Layout>
       <Head>
-        <title>Welcome</title>
+        <title>Code For Web: Traffic Light Example</title>
       </Head>
       <div className='section'>
         <div className='container'>
           <div className='columns'>
             <div className='column'>
+              <p style={{fontFamily: 'courier', fontSize: '11px'}}>This page demonstrate simply traffic light logic. Press the STOP button so you can cross the road.</p>
               <div className='traffic'>
                 <div className={light === 'green' ? 'light light--green active' : 'light light--green'} />
                 <div className={light === 'amber' ? 'light light--amber active' : 'light light--amber'} />

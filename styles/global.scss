@@ -65,6 +65,11 @@ a {
   outline: none;
 }
 
+.lalal {
+  margin: 1rem 0 0.8rem 0.8rem;
+  //border: 1px solid red;
+}
+
 // Hero
 .article {
   border: 1px solid #D3D3D3;
@@ -101,7 +106,6 @@ a {
 
     &.active {
       opacity: 1;
-      //animation: blink1 1.1s step-end infinite;
     }
   }
 
@@ -122,20 +126,6 @@ a {
     opacity: 0.1;
   }
 }
-
-
-//@keyframes blink1 {
-//  0% {
-//    //background-color: red;
-//    box-shadow: 0 0 6em lighten(#00FF00, 0%);
-//  }
-//
-//  50% {
-//    background-color: darken(#00FF00, 15%);
-//    box-shadow: 0 0 0 transparent;
-//  }
-//
-//}
 
 // Ball
 

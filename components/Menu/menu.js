@@ -28,12 +28,6 @@ const CONFIG = [
     title: 'Traffic Lights'
   },
   {
-    id: 3,
-    icon: faTv,
-    href: '/',
-    title: 'Netflix'
-  },
-  {
     id: 4,
     icon: faBaseballBall,
     href: '/bounce',
