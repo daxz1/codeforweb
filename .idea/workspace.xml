@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="220c289d-d83a-4de4-9700-543e0a6ed8c6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/_app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/api/hello.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vercel.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.htaccess" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Ball/__snapshots__/ball.test.js.snap" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Ball/ball.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Ball/ball.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Balls/balls.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Balls/balls.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/css/global.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/HeroArticle/HeroArticle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Layout/layout.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Menu/menu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experimental/state/actions.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experimental/state/base.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experimental/state/mutations.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experimental/state/pubsub.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experimental/state/store.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/bounce.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/custom.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/traffic.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/global.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/normalize.scss" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1bzH07u0fPT34sFtwwnXj2wJI5S" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="220c289d-d83a-4de4-9700-543e0a6ed8c6" name="Default Changelist" comment="" />
+      <created>1589627775840</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1589627775840</updated>
+      <workItem from="1589627780315" duration="256000" />
+      <workItem from="1589634302087" duration="748000" />
+      <workItem from="1589726226747" duration="669000" />
+      <workItem from="1589795582529" duration="1419000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+</project>
